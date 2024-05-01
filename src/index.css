@@ -1,13 +1,148 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@layer utilities {
+  .ch-85 {
+    height: 85vh;
+  }
+  .ch-80 {
+    height: 80vh;
+  }
+  .ch-77 {
+    height: 77vh;
+  }
+  .ch-73 {
+    height: 73vh;
+  }
+  .ch-76 {
+    height: 76vh;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  :root {
+    --primary: #f67f20;
+    --dark: #003048;
+    --light: #ffffff;
+    --success: #12991f;
+    --secondary: #dbdbdb;
+  }
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.active {
+  @apply bg-gray-300 text-gray-900;
+}
+
+/* primary----------------------------- */
+.text-primary {
+  color: var(--primary) !important;
+}
+.bg-primary {
+  background: var(--primary);
+}
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+/* dark------------------------- */
+.text-dark {
+  color: var(--dark) !important;
+}
+.bg-dark {
+  background: var(--dark) ;
+}
+.border-dark {
+  border-color: var(--dark) !important;
+}
+
+/* light-------------------- */
+.text-light {
+  color: var(--light) !important;
+}
+.bg-light {
+  background: var(--light) !important;
+}
+.border-light {
+  border-color: var(--light) !important;
+}
+
+/* success--------------------- */
+.text-success {
+  color: var(--success) !important;
+}
+.bg-success {
+  background: var(--success) !important;
+}
+.border-success {
+  border-color: var(--success) !important;
+}
+
+/* secondary------------- */
+.text-secondary {
+  color: var(--secondary) !important;
+}
+.bg-secondary {
+  background: var(--secondary) !important;
+}
+.border-secondary {
+  border-color: var(--secondary) !important;
+}
+
+.max-w-sm {
+  width: 15rem !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+
+.modal-bg {
+  background-image: url("/public/assets/images/banner/modal_bg.svg");
+}
+
+/* ScrollBar */
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #FF8421 #FFFFFF;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #f1f1f1;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #ff8421;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #d9701c;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #d9701c;
 }
