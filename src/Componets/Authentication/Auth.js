@@ -3,9 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const Auth = () => {
   return (
-    <>
-     
-      
+    <> 
         <div className="min-h-screen  text-gray-900 flex justify-center" style={{
                   backgroundImage: 'url("/assets/images/banner/login_bg.svg")',
                   backgroundRepeat : "no-repeat",

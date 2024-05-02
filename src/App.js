@@ -51,11 +51,11 @@ const App = () => {
         })}
         <Route path={"*"} element={<>404 page</>} />
         <Route path={"/auth"} element={<Auth />}>
-          <Route path={""} element={<Login />} />
-          <Route path={"registration"} element={<Registration />} />
-          <Route path={"forgetpassword"} element={<ForgetPassword />} />
-          <Route path={"resetpassword"} element={<ResetPassword />} />
-          <Route path={"sendlink"} element={<PasswordChangeSuccess />} />
+          <Route path={""} element={<Login title="Login"/>} />
+          <Route path={"registration"} element={<Registration title="Registration" />} />
+          <Route path={"forgetpassword"} element={<ForgetPassword title="Forget Password" />} />
+          <Route path={"resetpassword"} element={<ResetPassword title="Reset Password" />} />
+          <Route path={"sendlink"} element={<PasswordChangeSuccess title="Reset Link" />} />
         </Route>
       </Routes>
     </>

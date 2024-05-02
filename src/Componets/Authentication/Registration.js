@@ -2,7 +2,8 @@ import { IconAt, IconLock } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Registration = () => {
+const Registration = ({title}) => {
+  document.title = `SalaSprit | ${title}`
   return (
     <>
       <div className="m-0 md:m-12 flex flex-col w-full">

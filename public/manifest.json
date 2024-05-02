@@ -1,25 +1,98 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Salesprit",
+  "name": "Salesprit",
+  "description": "This is application for manage restaurant",
+  "lang": "en",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/FavIcon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/FavIcon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
+  "screenshots": [
+    {
+      "src": "/ss/SaleSprit-1.png",
+      "type": "image/png",
+      "sizes": "1920x919",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/ss/SaleSprit02.png",
+      "type": "image/png",
+      "sizes": "1920x919",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/ss/SaleSprit03.png",
+      "type": "image/png",
+      "sizes": "1920x919",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/ss/SaleSprit04.png",
+      "type": "image/png",
+      "sizes": "1920x919",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/ss/SaleSprit05.png",
+      "type": "image/png",
+      "sizes": "1920x919",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/ss/SaleSprit06.png",
+      "type": "image/png",
+      "sizes": "1920x919",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/ss/SaleSprit07.png",
+      "type": "image/png",
+      "sizes": "1920x919",
+      "form_factor": "wide"
+    },
+   
+    {
+      "src": "/ss/ss_m03.jpeg",
+      "type": "image/jpeg",
+      "sizes": "412x915",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/ss/ss_m04.jpeg",
+      "type": "image/jpeg",
+      "sizes": "412x915",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/ss/ss_m05.jpeg",
+      "type": "image/jpeg",
+      "sizes": "412x915",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/ss/ss_m06.jpeg",
+      "type": "image/jpeg",
+      "sizes": "412x915",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/ss/ss_m07.jpeg",
+      "type": "image/jpeg",
+      "sizes": "412x915",
+      "form_factor": "narrow"
+    }
+  ],
+  "start_url": "/",
+  "id": "/",
+  "display": "fullscreen",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }

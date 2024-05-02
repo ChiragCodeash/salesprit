@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import MainContextProvider from "./context/MainContextProvider";
+import swDev from "./SwDev";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -12,3 +13,4 @@ root.render(
     </MainContextProvider>
   </BrowserRouter>
 );
+swDev()

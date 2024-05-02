@@ -1,10 +1,13 @@
 import React from "react";
 import Sidebar from "./Common/Sidebar";
 import Cart from "./Home/Cart";
+import InstallPrompt from "./Common/InstallPrompt";
 
-const Layout = ({ Componets }) => {
+const Layout = ({ Componets , title }) => {
+  document.title = `SaleSprit | ${title}`
   return (
     <>
+    <InstallPrompt/>
       <Sidebar />
       <div className="md:ml-64">
         {/* <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"> */}
