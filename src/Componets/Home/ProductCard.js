@@ -29,9 +29,12 @@ const ProductCard = ({ data  }) => {
             </div>
 
             <img
-              className="h-auto max-w-full rounded-lg w-100"
+              className="h-auto max-w-full rounded-lg w-100 cursor-pointer"
               src={img}
               alt=""
+              onClick={() => {
+                AddToCart(data, id);
+              }}
             />
           </div>
           <div className="pt-2">

@@ -389,7 +389,7 @@ const Order = () => {
   const handleOpen = (data) => {
     setActiveData(data);
     const width = window.innerWidth;
-    if (width <= 768) {
+    if (width <= 1024) {
       setIsOpen(true);
     }
   };

@@ -35,7 +35,7 @@ const PersonalInfo = () => {
     setProfileData({...formData})
   }
   return (
-    <div className="ch-85 overflow-auto">
+    <div className="">
       <SettingHeader
         title={"Personal Information"}
         description={
@@ -133,7 +133,7 @@ const PersonalInfo = () => {
         </div>
       </div>
       <div className="flex justify-center w-100">
-        <button disabled={isValidate}  onClick={SaveChange} className="bg-dark disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium mx-20 px-14 py-3.5 rounded-lg text-center text-light text-sm text-white w-100">
+        <button disabled={isValidate}  onClick={SaveChange} className="bg-dark disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium mb-20 px-14 py-3.5 rounded-lg text-center text-light text-sm text-white w-100">
           Save Change
         </button>
       </div>

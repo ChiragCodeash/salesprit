@@ -71,7 +71,7 @@ const Product = () => {
           CustomeHeader={<CustomeButton onClick={OnAdd} />}
         />
 
-        <div className="mx-5 xl:ch-85 ch-80 overflow-auto border shadow-xl rounded-xl">
+        <div className="mx-5  h-100 overflow-auto border shadow-xl rounded-xl">
           <DataTable
             cols={cols}
             data={productData}
@@ -115,13 +115,13 @@ const Product = () => {
                 >
                   Yes
                 </Button>
-                <Button
-                  className="bg-dark text-light px-10"
-                  color="gray"
+                <button
+                  className="bg-dark text-light px-16 rounded-lg"
+                  
                   onClick={HideModal}
                 >
                   No
-                </Button>
+                </button>
               </div>
             </div>
           </Modal.Body>

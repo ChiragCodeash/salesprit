@@ -49,38 +49,7 @@ const Card = ({ title, children, className, subtitle, CustomeHeader ,onChangeTim
             ) : (
               CustomeHeader
             )}
-            {/* Dropdown menu
-            <div
-              id={dropDownId}
-              className="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-            >
-              <ul className="py-2" aria-labelledby={dropDownId}>
-                <li>
-                  <div
-                    
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    Today
-                  </div>
-                </li>
-                <li>
-                  <div
-                    
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    This week
-                  </div>
-                </li>
-                <li>
-                  <div
-                    
-                    className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    This month
-                  </div>
-                </li>
-              </ul>
-            </div> */}
+       
           </div>
         </div>
         <div className="flex justify-center">{children}</div>

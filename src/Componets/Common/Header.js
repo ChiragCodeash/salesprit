@@ -8,7 +8,7 @@ const Header = ( {title , CustomeHeader}) => {
         {
           title && <h1 className="font-extrabold text-3xl text-dark">{title}</h1>
         }
-        {/* <h1 className="font-extrabold text-3xl text-dark">{title}</h1> */}
+        
         {CustomeHeader && CustomeHeader}
       </div>
     </>

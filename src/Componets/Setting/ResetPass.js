@@ -5,7 +5,7 @@ const ResetPass = () => {
   const inputClasses = `bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-3.5 placeholder:font-semibold placeholder:text-gray-500 `;
   const labelClasses = `block mb-2 text-sm font-semibold text-gray-900 dark:text-white`;
   return (
-    <div className="ch-85 overflow-auto">
+    <div className="">
       <SettingHeader
         title={"Login & Password"}
         description={
@@ -66,7 +66,7 @@ const ResetPass = () => {
         </div>
       </div>
       <div className="flex justify-center w-100">
-        <button className="text-white bg-dark w-100 mx-20 text-light text-center  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-14  py-3.5   focus:outline-none ">
+        <button className="text-white bg-dark w-100 mb-20 text-light text-center  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-14  py-3.5   focus:outline-none ">
           Save Change
         </button>
       </div>

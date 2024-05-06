@@ -1,16 +1,18 @@
 import { IconMinus, IconPhoneFilled, IconPlus } from "@tabler/icons-react";
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { HomeContext, SettingContext } from "../../context/ContextState";
+import { Link, useNavigate } from "react-router-dom";
+import { GlobalContext, HomeContext, SettingContext } from "../../context/ContextState";
 
 const Cart = () => {
+  const navigate = useNavigate();
+  const {CloseCart,OpenCart, cartDrawer} = useContext(GlobalContext)
   const { cartData, Increment, Decrement, billData } = useContext(HomeContext);
-  const { profileData} = useContext(SettingContext);
+  const { profileData } = useContext(SettingContext);
   const { subtotal, tax, discount, total } = billData;
 
   return (
     <>
-      <div className="px-8 py-4   sticky top-0">
+      <div className="px-1 lg:px-8 lg:py-6  sticky top-0">
         <div className=" border-b-2 flex items-center pb-4">
           <div className="flex-shrink-0">
             <img
@@ -24,7 +26,7 @@ const Cart = () => {
               {profileData.fname} {profileData.lname}
             </p>
             <p className="text-sm text-gray-500 capitalize dark:text-gray-400">
-            {profileData.position}
+              {profileData.position}
             </p>
           </div>
 
@@ -93,14 +95,15 @@ const Cart = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-5 grid-rows-5 gap-4">
+        {/* <div className="grid grid-cols-5 grid-rows-5 gap-4">
           <div className="row-start-2"></div>
           <div className="row-start-3"></div>
           <div className="row-start-4"></div>
           <div className="row-start-5"></div>
           <div className="row-start-6"></div>
-        </div>
+        </div> */}
 
+        <div className="py-16">
         <div className="border-b-2 border-dashed flex flex-col gap-1 pb-6">
           <div className="flex justify-between">
             <h1 className="font-extrabold text-lg text-dark">Subtotal</h1>
@@ -129,24 +132,29 @@ const Cart = () => {
             </h1>
           </div>
         </div>
+        </div>
 
-        <div className="grid grid-cols-5 grid-rows-5 gap-4">
+        {/* <div className="grid grid-cols-5 grid-rows-5 gap-4">
           <div></div>
           <div className="row-start-2"></div>
           <div className="row-start-3"></div>
           <div className="row-start-4"></div>
           <div className="row-start-5"></div>
           <div className="row-start-6"></div>
-        </div>
+        </div> */}
 
         <div>
-          <Link
-            to={"/placeorder"}
+          <button
+            onClick={() => {
+              CloseCart()
+              navigate("/placeorder");
+            }}
             type="button"
+           
             className="text-white bg-dark text-light text-center  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm p-4 w-100 me-2 mb-2  focus:outline-none "
           >
             Place Order
-          </Link>
+          </button>
         </div>
       </div>
     </>

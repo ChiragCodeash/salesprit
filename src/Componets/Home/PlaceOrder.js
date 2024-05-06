@@ -3,10 +3,11 @@ import Header from "../Common/Header";
 import { IconCaretRightFilled, IconMinus, IconPlus } from "@tabler/icons-react";
 import { useNavigate } from "react-router-dom";
 import { Button, Modal } from "flowbite-react";
-import { HomeContext } from "../../context/ContextState";
+import { GlobalContext, HomeContext } from "../../context/ContextState";
 import moment from "moment";
 const PlaceOrder = () => {
   const { Decrement, Increment, billData, cartData } = useContext(HomeContext);
+  
   const { subtotal, total, tax, discount } = billData;
   const navigate = useNavigate();
   const inputClasses = `bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 placeholder:font-semibold placeholder:text-gray-500 `;

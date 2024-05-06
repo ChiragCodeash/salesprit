@@ -6,3 +6,4 @@ export const ProductContext = createContext();
 export const CustomerContext = createContext();
 export const MessageContext = createContext();
 export const SettingContext = createContext();
+export const GlobalContext = createContext();

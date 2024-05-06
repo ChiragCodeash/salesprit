@@ -35,7 +35,7 @@ const ChatList = () => {
 
   const OpenChat = (data) => {
     const width = window.innerWidth;
-    if (width <= 768) {
+    if (width <= 1024) {
       // setIsOpen(true);
       navigate("chatroom");
     }

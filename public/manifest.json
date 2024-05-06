@@ -22,30 +22,7 @@
       "sizes": "1920x919",
       "form_factor": "wide"
     },
-    {
-      "src": "/ss/SaleSprit02.png",
-      "type": "image/png",
-      "sizes": "1920x919",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/ss/SaleSprit03.png",
-      "type": "image/png",
-      "sizes": "1920x919",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/ss/SaleSprit04.png",
-      "type": "image/png",
-      "sizes": "1920x919",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/ss/SaleSprit05.png",
-      "type": "image/png",
-      "sizes": "1920x919",
-      "form_factor": "wide"
-    },
+   
     {
       "src": "/ss/SaleSprit06.png",
       "type": "image/png",
@@ -92,7 +69,17 @@
   ],
   "start_url": "/",
   "id": "/",
-  "display": "fullscreen",
+  "display": "standalone",
   "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "shortcuts": [
+    {
+      "name": "View Dashboard",
+      "url": "/dashboard"
+    },
+    {
+      "name": "View Notification",
+      "url": "/notification"
+    }
+  ]
 }

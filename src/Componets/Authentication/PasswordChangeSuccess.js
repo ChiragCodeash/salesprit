@@ -1,8 +1,9 @@
 import { IconLock } from "@tabler/icons-react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const PasswordChangeSuccess = ({title}) => {
+  const navigate = useNavigate()
   document.title = `SalaSprit | ${title}`
   return (
     <>
@@ -27,9 +28,9 @@ const PasswordChangeSuccess = ({title}) => {
           </div>
 
           <div className="mt-10">
-            <Link to={"/auth"}  type="button" className="text-white mt-5 bg-dark text-light text-center w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm p-3  focus:outline-none ">
+            <button onClick={()=> navigate("/auth")}  className="text-white mt-5 bg-dark text-light text-center w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm p-3  focus:outline-none ">
               Back To Login
-            </Link>
+            </button>
             <button className="text-white mt-5 bg-primary text-light text-center w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm p-3  focus:outline-none ">
               Resend Link
             </button>

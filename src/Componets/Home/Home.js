@@ -76,7 +76,7 @@ const Home = () => {
           </div>
 
           {/* Card */}
-          <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-4 p-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4  sm:grid-cols-3 gap-4 p-4">
             {/* <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-3 sm:border-2 sm:border-blue-600 xl:border-2 xl:border-red-600 lg:border-2 lg:border-yellow-600 md:border-2 md:border-green-900  gap-4"> */}
             {productData.map((item, i) => {
               return (

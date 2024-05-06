@@ -18,13 +18,13 @@ const ChatMessage = () => {
   const { name, message, color } = activeChat;
   useEffect(() => {
     const width = window.innerWidth;
-    if (width > 768) {
+    if (width > 1024) {
       navigate("/message");
     }
   }, []);
 
   const OnSend = () => {
-    if(msg){
+    if (msg) {
       setActiveChat({
         ...activeChat,
         message: [
@@ -32,7 +32,7 @@ const ChatMessage = () => {
           { message: msg, time: "12:22 PM", type: "send", id: Date.now() },
         ],
       });
-      setMsg()
+      setMsg();
     }
   };
 
@@ -75,7 +75,7 @@ const ChatMessage = () => {
           })}
         </div>
 
-        <div className="">
+        <div className="mb-4">
           <div className="w-full">
             <label
               htmlFor="search"

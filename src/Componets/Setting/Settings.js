@@ -77,7 +77,7 @@ const Settings = () => {
   ];
 
   const width = window.innerWidth;
-  if (width > 768) {
+  if (width > 1024) {
     return (
       <>
         <Header title={"Setting"} />
@@ -157,9 +157,9 @@ const Settings = () => {
     );
   } else {
     return (
-      <div className="col-span-12 md:col-span-7 p-5 ">
+      <div className="col-span-12 md:col-span-7 p-5  ">
         <Outlet />
-        <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+        <div className="fixed bottom-0 left-0 z-10 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
           <div className="grid h-full max-w-lg grid-cols-5 mx-auto font-medium">
             {NavigationBar.map((item, i) => {
               return (

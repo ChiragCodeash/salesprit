@@ -5,9 +5,10 @@ import {
   IconLock,
 } from "@tabler/icons-react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = ({title}) => {
+  const navigate = useNavigate()
   document.title = `SalaSprit | ${title}`
   return (
     <>
@@ -47,9 +48,9 @@ const Login = ({title}) => {
             Forget Password?
           </Link>
           <div>
-            <Link to={"/"} type="button" className="text-white mt-10 bg-dark text-light text-center w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm p-3  focus:outline-none ">
+            <button onClick={()=>{navigate("/")}} type="button" className="text-white mt-10 bg-dark text-light text-center w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm p-3  focus:outline-none ">
               Login
-            </Link>
+            </button>
           </div>
           <div className="my-6 border-b text-center">
             <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
