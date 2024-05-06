@@ -4,6 +4,7 @@ import ViewCustomer from "./Componets/Customers/ViewCustomer";
 import Dashboard from "./Componets/Dashboard/Dashboard";
 import Home from "./Componets/Home/Home";
 import PlaceOrder from "./Componets/Home/PlaceOrder";
+import Install from "./Componets/InstallApp/Install";
 import ChatMessage from "./Componets/Message/ChatMessage";
 import Message from "./Componets/Message/Message";
 import Notification from "./Componets/Notification/Notification";
@@ -101,6 +102,12 @@ const routes = [
     component: Message,
     exact: true,
     title: "Message",
+  },
+  {
+    path: "/install",
+    component: Install,
+    exact: true,
+    title: "Install App",
   },
   {
     path: "message/chatroom",

@@ -15,7 +15,7 @@ const Layout = ({ Componets, title }) => {
 
   return (
     <>
-      <InstallPrompt />
+      {/* <InstallPrompt /> */}
       <Sidebar handleOpen={OpenCart} OpenMenu={OpenMenu} />
       <div className="md:ml-64">
         <div className="">

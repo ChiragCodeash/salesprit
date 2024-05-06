@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DashboardContext, GlobalContext } from "../ContextState";
 
 const GlobalState = ({ children }) => {
@@ -10,7 +10,6 @@ const CloseCart = ()=>{
 }
 const OpenCart = ()=>{
     setCartDrawer(true)
-    // document.body.style.overflow = cartDrawer ? 'auto' : 'hidden';
 }
 
 const CloseMenu = ()=>{
@@ -18,10 +17,46 @@ const CloseMenu = ()=>{
 }
 const OpenMenu = ()=>{
     setMenuDrawer(true)
-    // document.body.style.overflow = menuDrawer ? 'auto' : 'hidden';
 }
+
+const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+useEffect(() => {
+const handleBeforeInstallPrompt = (event) => {
+    console.log("run");
+    event.preventDefault();
+    setShowInstallPrompt(true);
+    setDeferredPrompt(event);
+  };
+  
+  window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
+  return () => {
+    window.removeEventListener(
+      "beforeinstallprompt",
+      handleBeforeInstallPrompt
+    );
+  };
+},[]);
+
+const handleInstallClick = async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === "accepted") {
+        // console.log("User accepted the install prompt");
+        window.location.reload();
+      } else {
+        // console.log("User dismissed the install prompt");
+      }
+      setDeferredPrompt(null);
+    });
+  }
+};
   const DefaultObj = {
-    CloseCart,OpenCart, cartDrawer ,CloseMenu , OpenMenu , menuDrawer
+    CloseCart,OpenCart, cartDrawer ,CloseMenu , OpenMenu , menuDrawer , showInstallPrompt , handleInstallClick
   };
   return (
     <GlobalContext.Provider value={DefaultObj}>{children}</GlobalContext.Provider>

@@ -7,6 +7,7 @@ import {
   IconLayoutDashboardFilled,
   IconLogout,
   IconSettingsFilled,
+  IconSquareArrowDownFilled,
   IconUserFilled,
 } from "@tabler/icons-react";
 import { Link, useLocation } from "react-router-dom";
@@ -79,6 +80,14 @@ const MenuItem = () => {
         "/setting/opening_hour",
         "/setting/reset_pass",
         "/setting/lang_and_reg",
+      ],
+    },
+    {
+      name: "Install App",
+      icon: <IconSquareArrowDownFilled className={IconClass} />,
+      link: "/install",
+      activeList: [
+        "/install",
       ],
     },
     {

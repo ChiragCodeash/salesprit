@@ -25,10 +25,10 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="grid grid-cols-12  gap-4 m-5">
-          <div className="col-span-6 md:col-span-8">
+          <div className="col-span-12 md:col-span-8"> 
             <DailySelling/>
           </div>
-          <div className="col-span-6 md:col-span-4"><Dishes/></div>
+          <div className="col-span-12 md:col-span-4"><Dishes/></div>
         </div>
       </div>
     </>
